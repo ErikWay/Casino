@@ -1,26 +1,27 @@
+<!-- src/App.vue -->
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <GamesList />
+    <AddGameForm />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import GamesList from '@/components/GamesList.vue';
+import AddGameForm from '@/components/AddGameForm.vue';
+
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    GamesList,
+    AddGameForm,
+  },
+};
 </script>
 
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
