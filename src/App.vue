@@ -16,9 +16,6 @@ export default {
 
 <style>
 
-body {
-    overflow: hidden;
-}
 
 #app {
     background-color: rgb(0, 0, 0);

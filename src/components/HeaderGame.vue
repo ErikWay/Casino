@@ -3,7 +3,7 @@
     <div class="container">
         <nav>
             <ul class="menu">
-                <li ><router-link to="/" class="menu_link">Index</router-link></li>
+                <li ><router-link to="/main" class="menu_link">Index</router-link></li>
                 <li ><router-link to="/pay" class="menu_link">Cash</router-link></li>
                 <li ><router-link to="/games" class="menu_link" style=" font-size: 32px;text-shadow: #FC0 1px 0 10px;">Games</router-link></li>
                 <li ><router-link to="/connect" class="menu_link">Connect</router-link></li>

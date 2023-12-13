@@ -42,11 +42,12 @@ export default {
 </script>
 
 <style>
+
 .games{
   flex-shrink: 0;  
   position: relative;
   flex-wrap:wrap;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .games img{

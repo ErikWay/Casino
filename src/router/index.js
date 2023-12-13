@@ -12,7 +12,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    redirect: '/games', // Перенаправление с главной страницы на /connect
+    redirect: '/main', // Перенаправление с главной страницы на /connect
   },
   {
     path: '/connect',
