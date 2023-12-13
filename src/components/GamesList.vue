@@ -1,7 +1,6 @@
 <!-- src/components/GamesList.vue -->
 <template>
-  <div>
-    <h2>Games List</h2>
+  <div> 
     <div>
       <GameItem v-for="game in games" :key="game.id" :game="game" />
     </div>
@@ -34,14 +33,3 @@ export default {
   },
 };
 </script>
-
-
-<template>
-  <div>
-    <h2>Games List</h2>
-    <div>
-      <GameItem v-for="game in games" :key="game.id" :game="game" />
-    </div>
-  </div>
-</template>
-

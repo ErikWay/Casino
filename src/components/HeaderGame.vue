@@ -3,11 +3,11 @@
     <div class="container">
         <nav>
             <ul class="menu">
-                <li class="menu_link"><router-link to="/">Index</router-link></li>
-                <li class="menu_link"><router-link to="/pay">Cash</router-link></li>
-                <li class="menu_link"><router-link to="/games">Games</router-link></li>
-                <li class="menu_link"><router-link to="/connect">Connect</router-link></li>
-                <li class="menu_link"><router-link to="/games">Account</router-link></li>
+                <li ><router-link to="/" class="menu_link">Index</router-link></li>
+                <li ><router-link to="/pay" class="menu_link">Cash</router-link></li>
+                <li ><router-link to="/games" class="menu_link" style=" font-size: 32px;text-shadow: #FC0 1px 0 10px;">Games</router-link></li>
+                <li ><router-link to="/connect" class="menu_link">Connect</router-link></li>
+                <li ><router-link to="/account" class="menu_link">Account</router-link></li>
             </ul>
         </nav>
     </div>
@@ -39,7 +39,9 @@ header{
 .menu{
   display: flex;
   justify-content: space-between;
+
   padding: 10px 70px;
+    padding-top:18px;
   list-style-type: none;
   margin: 0px;
     text-decoration: none;

@@ -2,12 +2,12 @@
 <template>
   <div>
     <div class="gamesGame" @click="showModal" id="showModalBtn">
-      <img src="./img/icons8-плюс.svg" style="left:30%" alt="bg">
+      <img src="./img/icons8-плюс.svg" style="left:30%; width:30%" alt="bg">
     </div>
   
     <div id="modal" class="modal">
       <div class="modal-content">
-        <button class="close" id="closeModalBtn" @click="closeModal">&times;</button>
+        <span class="close" id="closeModalBtn" @click="closeModal">&times;</span>
         <form id = "form-for-auto" @submit.prevent="addGame" >
           <label for="username" class = "text-for-auto">Game name: </label>
           <br><input v-model="name" required id="username">
@@ -98,8 +98,10 @@ export default {
   #modal {
     display: none;
     position: fixed;
+    float: bottom;
     top: 50%;
     left: 50%;
+    bottom: 1%;
     transform: translate(-50%, -50%);
     padding: 20px;
     width: 500px;
