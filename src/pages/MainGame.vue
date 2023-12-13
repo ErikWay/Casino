@@ -47,7 +47,7 @@ export default {
   flex-shrink: 0;  
   position: relative;
   flex-wrap:wrap;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .games img{
