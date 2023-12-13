@@ -32,6 +32,8 @@ header{
   background: #2F0000;
   box-shadow: 10px 10px 10px 5px #792626;
   z-index: 100;
+    text-decoration: none;
+
 }
 
 .menu{
@@ -40,6 +42,8 @@ header{
   padding: 10px 70px;
   list-style-type: none;
   margin: 0px;
+    text-decoration: none;
+
 }
 .menu_link{
   color: #FFF;

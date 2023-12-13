@@ -15,8 +15,16 @@ export default {
 </script>
 
 <style>
+
+body {
+    overflow: hidden;
+}
+
 #app {
     background-color: rgb(0, 0, 0);
     scroll-behavior: smooth;
+      text-decoration: none;
+
+
 }
 </style>

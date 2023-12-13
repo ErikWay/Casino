@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import ConnectGame from '@/pages/ConnectGame.vue';
 import MainGame from '@/pages/MainGame.vue';
+import PresentPage from '@/pages/PresentPage.vue';
 
 Vue.use(VueRouter);
 
@@ -18,6 +19,10 @@ const routes = [
     path: '/games',
     component: MainGame,
   },
+  {
+    path: '/main',
+    component: PresentPage,
+  }, 
 ];
 
 const router = new VueRouter({
