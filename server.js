@@ -49,13 +49,14 @@ connection.connect((err) => {
 // Добавьте этот блок для настройки сессий
 
 
-app.get('/logout', (req, res) => {
+app.post('/logout', async (req, res) => {
   req.session.destroy((err) => {
     if (err) {
-      console.error('Error destroying session:', err);
+      console.error('Error during logout:', err);
       res.status(500).json({ error: 'Internal Server Error' });
     } else {
-      res.json({ message: 'Logout successful' });
+      res.clearCookie('connect.sid');
+      res.status(204).end(); // Отправляем успешный статус без тела
     }
   });
 });

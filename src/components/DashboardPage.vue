@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import axios from 'axios';
 import { checkAuthStatus } from '@/api.js';
+import { logoutAcc } from '@/api.js';
 
 export default {
   data() {
@@ -37,7 +37,7 @@ export default {
     },
     async logout() {
     try {
-      await axios.get('http://localhost:3000/logout', { withCredentials: true });
+      await logoutAcc();
       this.username = null; // Сброс значения имени пользователя
       this.$router.push('/'); // Перенаправление после выхода из аккаунта
       alert('Выход');
