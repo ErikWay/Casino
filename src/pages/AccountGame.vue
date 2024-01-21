@@ -5,7 +5,7 @@
     <img src="../components/img/bgGames.png" alt="bg">
    <div class="gameUnum">
     
-        <img src="../components/img/URnaMrya_400x400.jpg" id="acimg" alt="Acccount">
+       <!-- <img src="../components/img/URnaMrya_400x400.jpg" id="acimg" alt="Acccount">
         <h1 class="bionaming"> BIO:</h1>
         <h5 class="bio">
             Welcome to Erik, a premier casino destination in 
@@ -25,8 +25,10 @@
             Student (Bachelor) 
             <br>Form of study:
             Full-time department 
-        </h5>
-   </div>
+        </h5>-->
+        <DashboardPage />
+   </div> 
+   
 </div>
 
   <FooterGame />
@@ -35,12 +37,14 @@
 
 <script>
 import FooterGame from '@/components/FooterGame.vue';
-
 import HeaderGame from '@/components/HeaderGame.vue';
+import DashboardPage from '@/components/DashboardPage.vue';
+
 export default {
   components: {
     HeaderGame,
-    FooterGame
+    FooterGame,
+    DashboardPage
   },
 };
 </script>

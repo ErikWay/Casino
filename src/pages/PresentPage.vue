@@ -32,17 +32,18 @@
         </header>
     </div>
     <div id="modal" class="modal">
-      <div class="modal-content">
-        <span class="close" id="closeModalBtn" @click="closeModal">&times;</span>
-        <form id = "form-for-auto">
-            <label for="username" class = "text-for-auto">E-mail/phone</label>
-            <br><input type="text" id="username" name="username" required>
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn" @click="closeModal">&times;</span>
+            <!--<form id = "form-for-auto">
+                <label for="username" class = "text-for-auto">E-mail/phone</label>
+                <br><input type="text" id="username" name="username" required>
           
-            <br><br><label for="password" class = "text-for-auto">Password</label>
-            <br><input type="password" id="password" name="password" required>
+                <br><br><label for="password" class = "text-for-auto">Password</label>
+                <br><input type="password" id="password" name="password" required>
             
-            <br><br><a href="/games" @click.prevent="goToGames"><input type="submit" value="Log In" class = "button-for-auto"></a>
-          </form>
+                <br><br><a href="/games" @click.prevent="goToGames"><input type="submit" value="Log In" class = "button-for-auto"></a>
+            </form> -->
+            <LoginForm />
         </div>
     </div>
 
@@ -60,6 +61,7 @@
         </div>
        
     </div>
+    <RegisterForm />
     <div class ="About" id = "2">
         <div class="container">
             <div class="row">
@@ -227,8 +229,15 @@
 </template>
 
 <script>
+import LoginForm from '@/components/LoginForm.vue';
+import RegisterForm from '@/components/RegisterForm.vue';
+
 
 export default {
+    components: {
+    LoginForm,
+    RegisterForm,
+  },
     methods: {
     showModal() {
       document.getElementById('modal').style.display = 'block';
