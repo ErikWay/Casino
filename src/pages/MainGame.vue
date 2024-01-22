@@ -14,7 +14,7 @@
         </select>
       </div>
       <GamesList />
-      <AddGameForm />
+      <div id = "addForm"><AddGameForm /></div>
     </div>
   </div>
   <FooterGame />
@@ -28,6 +28,7 @@ import GamesList from '@/components/GamesList.vue';
 import AddGameForm from '@/components/AddGameForm.vue';
 import HeaderGame from '@/components/HeaderGame.vue';
 import FooterGame from '@/components/FooterGame.vue';
+import { checkAuthStatus } from '@/api.js';
 
 
 export default {
@@ -37,7 +38,30 @@ export default {
     HeaderGame,
     FooterGame,
   },
-  
+  data() {
+    return {
+      username: null,
+    };
+  },
+  async mounted() {
+    this.checkAuth(); // Вызываем checkAuth при монтировании компонента
+  },
+  methods: {
+    async checkAuth() {
+      try {
+        const response = await checkAuthStatus();
+        if (response.data.authenticated) {
+          document.getElementById('addForm').style.display = 'block';
+        } else {
+          document.getElementById('addForm').style.display = 'none';
+        }
+      } catch (error) {
+        console.error('Error checking auth status:', error);
+        this.$router.push('/'); // Перенаправление в случае ошибки
+        alert('Перенаправление в случае ошибки');
+      }
+    },
+  }
 };
 </script>
 

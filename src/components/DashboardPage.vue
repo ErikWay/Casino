@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id = "dash">
     <h1>Личный кабинет</h1>
     <p>Username: {{ username }}</p>
     <button @click="logout">Выйти</button>
@@ -49,3 +49,37 @@ export default {
   },
 };
 </script>
+
+<style>
+
+#dash{
+  padding: 20px;
+  color: #fff;
+  margin-left:50px;
+
+}
+
+#dash h1{
+
+}
+#dash p{
+
+}
+#dash button{
+position: relative;
+top:43%;
+
+width: 152px;
+height: 53px;
+flex-shrink: 0;
+border-radius: 10px;
+border: 2px solid #FFF;
+box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);
+background: none;
+color: #FFF;
+}
+
+#dash button:hover{
+    background-color: #dddddd2c;
+}
+</style>

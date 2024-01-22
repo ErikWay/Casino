@@ -68,8 +68,9 @@ export default {
 
 <style>
 .gamesGame{
+    float:left;
     padding: 20px;
-    width: 30%;
+    width: 29%;
     height: 40%;
     border-radius: 20px;
     background: #2F0000;
