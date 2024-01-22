@@ -6,7 +6,7 @@
     <br><br><label for="password" class = "text-for-auto">Password</label>
     <br><input v-model="password" id="password" type="password" required>
 
-    <br><br><button type="submit" class = "button-for-auto" >Войти</button>
+    <br><br><button type="submit" class = "button-for-auto" >Log In</button>
   </form>
 </template>
 

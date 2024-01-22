@@ -25,8 +25,12 @@
                             <img src="../components/img/passkey.svg" alt="bg">
                         </div>
                     </div>
-    
-    
+                    <div class="col-md-1">
+                        <div id="showModalBtn" @click="showModalReg">
+                            <img src="../components/img/icons8-плюс.svg" alt="bg">
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </header>
@@ -46,6 +50,12 @@
             <LoginForm />
         </div>
     </div>
+    <div id="modalReg" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn" @click="closeModalReg">&times;</span>
+            <RegisterForm />
+        </div>
+    </div>
 
     <div class ="play" id = "1">
         <img src="../components/img/bg1.png" alt="bg">
@@ -61,7 +71,6 @@
         </div>
        
     </div>
-    <RegisterForm />
     <div class ="About" id = "2">
         <div class="container">
             <div class="row">
@@ -245,6 +254,12 @@ export default {
     closeModal() {
       document.getElementById('modal').style.display = 'none';
     },
+    showModalReg() {
+      document.getElementById('modalReg').style.display = 'block';
+    },
+    closeModalReg() {
+      document.getElementById('modalReg').style.display = 'none';
+    },
     goToGames() {
       this.$router.push('/games');
     }
@@ -311,7 +326,7 @@ header .menu_link{
     cursor: pointer;
   }
 
-  #modal {
+  .modal {
     display: none;
     position: fixed;
     top: 50%;
